@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLN111 - 521 Câu Trắc Nghiệm</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Ôn Tập MLN111</h1>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="stats">
+                <span id="question-count">Câu hỏi: 0/521</span>
+                <div class="jump-container">
+                    <input type="number" id="jump-input" min="1" placeholder="Tới câu...">
+                    <button id="jump-btn" class="btn btn-primary btn-small">Đi</button>
+                </div>
+                <span id="score-count">Điểm: 0</span>
+            </div>
+        </header>
+
+        <main class="quiz-container">
+            <div id="loading" class="loading">Đang tải dữ liệu...</div>
+
+            <div id="quiz-content" class="hidden">
+                <div class="question-card">
+                    <h2 id="question-text" class="question-text"></h2>
+                    <p id="alternative-question" class="alternative-question hidden"></p>
+
+                    <div id="options-container" class="options-grid">
+                        <!-- Options will be injected here -->
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="prev-btn" class="btn btn-secondary" disabled>Câu trước</button>
+                    <button id="check-btn" class="btn btn-primary" disabled>Kiểm tra</button>
+                    <button id="show-answer-btn" class="btn btn-primary">Xem Đáp Án</button>
+                    <button id="next-btn" class="btn btn-primary">Câu tiếp</button>
+                </div>
+            </div>
+
+            <div id="result-container" class="hidden">
+                <h2>Hoàn thành!</h2>
+                <p>Bạn đã trả lời đúng <span id="final-score"></span> câu.</p>
+                <button id="restart-btn" class="btn btn-primary">Làm lại từ đầu</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
