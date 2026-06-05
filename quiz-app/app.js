@@ -83,6 +83,28 @@ document.addEventListener('DOMContentLoaded', () => {
             elements.quizContent.classList.remove('hidden');
             loadQuestion(0);
         });
+
+        document.addEventListener('keydown', (e) => {
+            // Do not trigger shortcuts if user is typing in an input
+            if (e.target.tagName.toLowerCase() === 'input') return;
+
+            if (e.code === 'Space') {
+                e.preventDefault(); // Prevent page scrolling
+                if (!elements.showAnswerBtn.disabled) {
+                    elements.showAnswerBtn.click();
+                }
+            } else if (e.code === 'ArrowRight' || e.code === 'ArrowDown') {
+                e.preventDefault();
+                if (!elements.nextBtn.disabled) {
+                    elements.nextBtn.click();
+                }
+            } else if (e.code === 'ArrowLeft' || e.code === 'ArrowUp') {
+                e.preventDefault();
+                if (!elements.prevBtn.disabled) {
+                    elements.prevBtn.click();
+                }
+            }
+        });
     }
 
     function jumpToQuestion() {

@@ -4204,7 +4204,9 @@ const quizData = [
   {
     "question": "Các nhà triết học duy tâm được chia thành mấy trường phái?",
     "options": [
-      "A. 2 В. 3 С. 4",
+      "A. 2",
+      "B. 3",
+      "C. 4",
       "D. 5"
     ],
     "answer": [
@@ -4373,7 +4375,8 @@ const quizData = [
     "options": [
       "A. Trình độ của công cụ sản xuất",
       "B. Trình độ kỹ thuật sản xuất",
-      "C. Trình độ phân công lao động xã hội"
+      "C. Trình độ phân công lao động xã hội",
+      "D. Trình độ phát triển của lực lượng sản xuất"
     ],
     "answer": [
       "D"
