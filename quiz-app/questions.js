@@ -6235,7 +6235,8 @@ const quizData = [
     "options": [
       "A. Kết quả",
       "B. Nguyên nhân",
-      "C. Nội dung"
+      "C. Nội dung",
+      "D. Hình thức"
     ],
     "answer": [
       "D"
